@@ -1,0 +1,417 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the wrapper is above other elements */
+  background-color: black; /* Matches your navbar's background */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Optional for better visibility */
+}
+
+nav {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 5px 20px;
+    position: relative; /* For proper positioning of the menu toggle */
+    z-index: 10; /* Ensures the navbar stays on top */
+}
+
+nav .logo img {    
+  height: 100px;
+  scale: 2.35;
+  padding-top: 35px; 
+}
+
+nav .menu-toggle {
+    display: none; /* Hidden by default */
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+nav div {
+    display: flex;
+    gap: 20px; /* Adds spacing between links */
+    transition: max-height 0.3s ease; /* Smooth dropdown effect */
+}
+
+nav div a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+
+nav div a:hover {
+    opacity: 0.6;
+    color: #da492b;
+    transform: scale(1.5);
+}
+#our-company {
+  width: 100%;
+  padding: 50px 20px;
+  background-color: #2D3142; /* Light background for contrast */
+  text-align: center;
+  color: white;
+}
+
+#our-company h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#our-company p {
+  font-size: 1.5em;
+  line-height: 1.5;
+  max-width: 85%;
+  margin: 0 auto; /* Centers the text */
+  padding: 0 15px;
+  word-wrap: break-word; /* Prevents long words from breaking layout */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    nav .menu-toggle {
+        display: block; /* Show the toggle button */
+    }
+
+
+
+    nav div {
+        flex-direction: column; /* Stack links vertically */
+        background-color:black; /* Same as the navbar */
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%; /* Full-width dropdown */
+        max-height: 0; /* Initially hidden */
+        overflow: hidden; /* Hide overflowing content */
+    }
+
+    nav div.active {
+        max-height: 300px; /* Allow links to be visible when active */
+    }
+
+    nav div a {
+        margin: 10px 0; /* Space between links */
+        text-align: center;
+    }
+    nav .logo img {    
+      height: 25px;
+      /* scale: 2.35; */
+      padding-top: 10px;
+    }
+    #our-company h2 {
+      font-size: 2em;
+    }
+  
+    #our-company p {
+      font-size: 0.9em;
+      line-height: 1.4;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-left: 25px;
+      padding-right: 50px;
+      max-width: 600px;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    nav div a {
+        font-size: 0.9em; /* Smaller font for links */
+    }
+
+    nav .menu-toggle {
+        font-size: 1.2em;
+    }
+    #our-company h2 {
+      font-size: 1.5em;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+  
+    #our-company p {
+      font-size: 0.8em;
+      line-height: 1.3;
+      padding-top: 25px;
+      padding-bottom: 50px;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      
+
+    }
+}
+
+.parallax {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #da492b;
+
+}
+
+.parallax::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('CSLLCT/Images/dean-brierley-yTyXzvRJCUQ-unsplash.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.parallax h1,
+.parallax p {
+  position: relative;
+  z-index: 2;
+  margin: 0 10px; /* Ensures proper spacing on smaller screens */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: #da492b; /* Ensures text remains visible */
+  -webkit-text-stroke: 1px black; /* Adds a black outline */
+}
+
+.parallax h1 {
+  font-size: 7em;
+  margin-bottom: 200px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: #da492b; /* Ensures text remains visible */
+  -webkit-text-stroke: 1px black; /* Adds a black outline *  D74C25 */
+}
+
+.parallax p {
+  font-size: 3.2em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .parallax {
+      height: 70vh;
+  }
+
+  .parallax h1 {
+      font-size: 4em;
+      margin: 100px 0;
+  }
+
+  .parallax p {
+      font-size: 1.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .parallax {
+      height: 50vh;
+  }
+
+  .parallax::before {
+      background-attachment: scroll; /* Prevents fixed backgrounds on mobile for better performance */
+  }
+
+  .parallax h1 {
+      font-size: 2em;
+      margin: 50px 0;
+  }
+
+  .parallax p {
+      font-size: 1.2em;
+  }
+}
+
+
+#services {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 4em;
+    margin-bottom: 100px;
+}
+
+.service {
+    display: inline-block;
+    width: 30%;
+    margin: 1%;
+    vertical-align: top;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+}
+
+.service p {
+    margin-top: 10px;
+    color: black;
+}
+
+#contact {
+    padding-top: 50px;
+    background-color: #2D3142;
+}
+
+#contact h2 {
+    text-align: center;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: white;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 20px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    color: black;
+}
+
+form button {
+    margin-top:25px;
+    padding: 20px 100px;    
+    font-size: 1em;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+form button:hover {
+    opacity: .7;
+    background-color: #da492b;
+}
+
+footer {
+    background-color: black;
+    color: rgba(218, 73, 43, .5); /* Muted white text color */  
+    text-align: center;
+    padding: 10px 0;
+}
+
+.logo img {
+    height: 40px;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    nav .menu-toggle {
+        display: block;
+    }
+
+    nav div {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: black;
+    }
+
+    nav div a {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav div.active {
+        display: flex;
+    }
+
+    .parallax {
+        height: 400px;
+    }
+
+    .parallax h1 {
+        font-size: 2.5em;
+    }
+
+    .parallax p {
+        font-size: .75em;
+        color:#da492b;
+    }
+
+    .service {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 5px;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 0.9em;
+    }
+
+    .parallax h1 {
+        font-size: 1.5em;
+    }
+
+    .parallax p {
+        font-size: 0.9em;
+        color:#da492b;
+    }
+
+    form input, form textarea {
+        font-size: 0.9em;
+    }
+
+    form button {
+        font-size: 0.9em;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
