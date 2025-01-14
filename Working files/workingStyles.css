@@ -1,0 +1,127 @@
+
+/* @media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    nav .menu-toggle {
+        display: block;
+    }
+
+    nav div {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: black;
+    }
+
+    nav div a {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav div.active {
+        display: flex;
+    }
+
+    .parallax {
+        height: 400px;
+    }
+
+    .parallax h1 {
+        font-size: 2.5em;
+    }
+
+    .parallax p {
+        font-size: .75em;
+        color:#da492b;
+    }
+
+    .service {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+@media (max-width: 768px) {
+  .parallax {
+      height: 70vh;
+  }
+
+  .parallax h1 {
+      font-size: 4em;
+      margin: 100px 0;
+  }
+
+  .parallax p {
+      font-size: 1.8em;
+  }
+}
+ */
+ 
+ 
+ /* Responsive Styles */
+@media (max-width: 1400px) {
+    .parallax h1 {
+        font-size: 6em;
+    }
+    .parallax p {
+        font-size: 2em;
+    }
+   
+}
+
+
+
+@media (max-width: 800px) {
+    nav .menu-toggle {
+        display: block; /* Show the toggle button */
+    }
+
+    nav div {
+        flex-direction: column; /* Stack links vertically */
+        background-color:black; /* Same as the navbar */
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%; /* Full-width dropdown */
+        max-height: 0; /* Initially hidden */
+        overflow: hidden; /* Hide overflowing content */
+    }
+
+    nav div.active {
+        max-height: 300px; /* Allow links to be visible when active */
+    }
+
+    nav div a {
+        margin: 10px 0; /* Space between links */
+        text-align: center;
+    }
+    nav .logo img {    
+      height: 50px;
+      /* scale: 2.35; */
+      padding-top: 20px;
+    }
+
+    .parallax h1 {
+        font-size: 4em;
+    }
+    .parallax p {
+        font-size: 1.5em;
+    }
+
+    #our-company h2 {
+      font-size: 2em;
+    }
+  
+    #our-company p {
+      font-size: 0.9em;
+      line-height: 1.4;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-left: 25px;
+      padding-right: 50px;
+      max-width: 600px;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+} 

@@ -1,4 +1,5 @@
-* {
+* 
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,27 +9,26 @@
     list-style: none;  /* Removes bullets from lists */
     text-decoration: none;  /* Removes underline from links */
 }
-
-html {
+html 
+{
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
-
 }
-
-body {
-    margin: 0;
+body 
+{
     font-family: Arial, sans-serif;
 }
-html, body {
+html, body 
+{
   overflow-x: hidden;
 }
-
-.logo img {
+.logo img 
+{
     height: 40px;
     vertical-align: middle;
 }
-
-.nav-wrapper {
+.nav-wrapper 
+{
   position: fixed;
   top: 0;
   left: 0;
@@ -37,8 +37,8 @@ html, body {
   background-color: black; /* Matches your navbar's background */
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Optional for better visibility */
 }
-
-nav {
+nav 
+{
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -48,14 +48,14 @@ nav {
     position: relative; /* For proper positioning of the menu toggle */
     z-index: 10; /* Ensures the navbar stays on top */
 }
-
-nav .logo img {    
+nav .logo img 
+{    
   height: 100px;
   scale: 2.35;
   padding-top: 25px; 
 }
-
-nav .menu-toggle {
+nav .menu-toggle 
+{
     display: none; /* Hidden by default */
     background-color: black;
     border: none;
@@ -63,27 +63,27 @@ nav .menu-toggle {
     font-size: 1.5em;
     cursor: pointer;
 }
-
-nav div {
+nav div 
+{
     display: flex;
     gap: 20px; /* Adds spacing between links */
     transition: max-height 0.3s ease; /* Smooth dropdown effect */
 }
-
-nav div a {
+nav div a 
+{
     color: white;
     text-decoration: none;
     margin: 0 15px;
     transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
 }
-
-nav div a:hover {
+nav div a:hover 
+{
     opacity: 0.6;
     color: #da492b;
     transform: scale(1.5);
 }
-
-.parallax {
+.parallax 
+{
     position: relative;
     overflow: hidden;
     height: 95vh;
@@ -91,11 +91,10 @@ nav div a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #da492b;
-  
-  }
-  
-  .parallax::before {
+    color: #da492b;  
+  }  
+  .parallax::before 
+  {
     content: "";
     position: absolute;
     top: 0;
@@ -109,31 +108,31 @@ nav div a:hover {
     background-size: cover;
     opacity: 0.4;
     z-index: 1;
-  }
-  
+  }  
   .parallax h1,
-  .parallax p {
+  .parallax p 
+  {
     position: relative;
     z-index: 2;
     margin: 0 25px; /* Ensures proper spacing on smaller screens */
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     color: #da492b; /* Ensures text remains visible */
     -webkit-text-stroke: 1px black; /* Adds a black outline */
-  }
-  
-  .parallax h1 {
+  }  
+  .parallax h1 
+  {
     font-size: 8em;
     margin-bottom: 200px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     color: #da492b; /* Ensures text remains visible */
     -webkit-text-stroke: 1px black; /* Adds a black outline *  D74C25 */
-  }
-  
-  .parallax p {
+  }  
+  .parallax p 
+  {
     font-size: 3.0em;
   }
-
-#our-company {
+#our-company 
+{
   width: 100%;
   height: 90vh;
   padding: 25px 20px;
@@ -141,16 +140,16 @@ nav div a:hover {
   text-align: center;
   color: white;
 }
-
-#our-company h2 {
+#our-company h2 
+{
   font-size: 2.75em;
   padding-top: 75px;
   margin-bottom: 20px;
   color: #FFFFFF;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
-
-#our-company p {
+#our-company p 
+{
   font-size: 1.5em;
   line-height: 1.5;
   max-width: 90%;
@@ -161,51 +160,51 @@ nav div a:hover {
   word-wrap: break-word; /* Prevents long words from breaking layout */
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
-
-#services {
+#services 
+{
     padding: 50px 20px;    
     text-align: center;
 }
-
-#services h2 {
+#services h2 
+{
     padding-top: 50px;
     font-size: 4em;
     margin-bottom: 75px;
 }
-
-.service {
+.service 
+{
     display: inline-block;
     width: 30%;
     margin: 1%;
     vertical-align: top;
 }
-
-.service img {
+.service img 
+{
     width: 100%;
     height: auto;
     max-height: 350px;
 }
-
-.service p {
+.service p 
+{
     font-size: 1.5em;
     margin-top: 10px;
     color: black;
 }
-/* form container - not header */
-.contact-container {
+.contact-container 
+{
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 50px;
 }
-
-#contact {
+#contact 
+{
     padding: 25px 50px;
     background-color: #2D3142;
     height: 90vh;
 }
-
-#contact h2 {
+#contact h2 
+{
     text-align: center;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -213,13 +212,13 @@ nav div a:hover {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     color: white;
 }
-
-form {
+form 
+{
     max-width: 600px;
     margin: 0 auto;
 }
-
-form input, form textarea {
+form input, form textarea 
+{
     width: 100%;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -229,8 +228,8 @@ form input, form textarea {
     border-radius: 15px;
     color: black;
 }
-
-form button {
+form button 
+{
     margin-top:25px;
     padding: 20px 100px;    
     font-size: 1em;
@@ -240,21 +239,21 @@ form button {
     border-radius: 15px;
     cursor: pointer;
 }
-
-form button:hover {
+form button:hover 
+{
     opacity: .7;
     background-color: #da492b;
 }
-
-footer {
+footer 
+{
     background-color: black;
     color: rgba(218, 73, 43, .5); /* Muted white text color */  
     text-align: center;
     padding: 10px 0;
 }
-
 /* Responsive section starting with 500px */
-@media (max-width: 500px) {
+@media (max-width: 500px) 
+{
     nav {
         padding: 5px;
     }
@@ -366,15 +365,9 @@ footer {
         margin-top: 25px;
         margin-bottom: 25px;
         padding: 20px;
-        font-size: 1em;
         border: 1px solid #ccc;
         border-radius: 15px;
         color: black;
-    }
-
-
-
-    form input, form textarea {
         font-size: 1.5em;
     }
 

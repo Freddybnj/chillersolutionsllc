@@ -1,0 +1,292 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+  }
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  .logo img {
+      height: 40px;
+      vertical-align: middle;
+  }
+  
+  .nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the wrapper is above other elements */
+    background-color: black; /* Matches your navbar's background */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Optional for better visibility */
+  }
+  
+  nav {
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: black;
+      padding: 5px 20px;
+      position: relative; /* For proper positioning of the menu toggle */
+      z-index: 10; /* Ensures the navbar stays on top */
+  }
+  
+  nav .logo img {    
+    height: 100px;
+    scale: 2.35;
+    padding-top: 35px; 
+  }
+  
+  nav .menu-toggle {
+      display: none; /* Hidden by default */
+      background-color: black;
+      border: none;
+      color: white;
+      font-size: 1.5em;
+      cursor: pointer;
+  }
+  
+  nav div {
+      display: flex;
+      gap: 20px; /* Adds spacing between links */
+      transition: max-height 0.3s ease; /* Smooth dropdown effect */
+  }
+  
+  nav div a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+  }
+  
+  nav div a:hover {
+      opacity: 0.6;
+      color: #da492b;
+      transform: scale(1.5);
+  }
+  
+  .parallax {
+      position: relative;
+      overflow: hidden;
+      height: 95vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #da492b;
+    
+    }
+    
+    .parallax::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('CSLLCT/Images/dean-brierley-yTyXzvRJCUQ-unsplash.jpg');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.4;
+      z-index: 1;
+    }
+    
+    .parallax h1,
+    .parallax p {
+      position: relative;
+      z-index: 2;
+      margin: 0 25px; /* Ensures proper spacing on smaller screens */
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      color: #da492b; /* Ensures text remains visible */
+      -webkit-text-stroke: 1px black; /* Adds a black outline */
+    }
+    
+    .parallax h1 {
+      font-size: 8em;
+      margin-bottom: 200px;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      color: #da492b; /* Ensures text remains visible */
+      -webkit-text-stroke: 1px black; /* Adds a black outline *  D74C25 */
+    }
+    
+    .parallax p {
+      font-size: 3.0em;
+    }
+  
+  #our-company {
+    width: 100%;
+    height: 90vh;
+    padding: 25px 20px;
+    background-color: #2D3142; /* Light background for contrast */
+    text-align: center;
+    color: white;
+  }
+  
+  #our-company h2 {
+    font-size: 2.75em;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+  
+  #our-company p {
+    font-size: 1.5em;
+    line-height: 1.5;
+    max-width: 90%;
+    margin: 0 auto; /* Centers the text */
+    padding: 0 15px;
+    padding-top: 50px;
+    word-wrap: break-word; /* Prevents long words from breaking layout */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+  
+  #services {
+      padding: 50px 20px;
+      text-align: center;
+  }
+  
+  #services h2 {
+      font-size: 4em;
+      margin-bottom: 100px;
+  }
+  
+  .service {
+      display: inline-block;
+      width: 30%;
+      margin: 1%;
+      vertical-align: top;
+  }
+  
+  .service img {
+      width: 100%;
+      height: auto;
+      max-height: 350px;
+  }
+  
+  .service p {
+      margin-top: 10px;
+      color: black;
+  }
+  /* form container - not header */
+  .contact-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 50px;
+  }
+  
+  #contact {
+      padding: 25px 50px;
+      background-color: #2D3142;
+      height: 90vh;
+  }
+  
+  #contact h2 {
+      text-align: center;
+      font-size: 3em;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      color: white;
+  }
+  
+  form {
+      max-width: 600px;
+      margin: 0 auto;
+  }
+  
+  form input, form textarea {
+      width: 100%;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      padding: 20px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+      color: black;
+  }
+  
+  form button {
+      margin-top:25px;
+      padding: 20px 100px;    
+      font-size: 1em;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+  }
+  
+  form button:hover {
+      opacity: .7;
+      background-color: #da492b;
+  }
+  
+  footer {
+      background-color: black;
+      color: rgba(218, 73, 43, .5); /* Muted white text color */  
+      text-align: center;
+      padding: 10px 0;
+  }
+  
+  /* General responsive design rules */
+  @media (max-width: 1024px) {
+      .parallax h1 {
+          font-size: 4.5em;
+      }
+      .parallax p {
+          font-size: 1.8em;
+      }
+      #services .service {
+          width: 45%; /* Increase the width for better alignment */
+      }
+  }
+  
+  @media (max-width: 768px) {
+      .nav-wrapper nav div {
+          flex-direction: column; /* Stacking navigation links */
+      }
+      .parallax h1 {
+          font-size: 3.5em;
+      }
+      .parallax p {
+          font-size: 1.5em;
+      }
+      #services .service {
+          width: 100%; /* Full-width for smaller screens */
+      }
+      form input, form textarea {
+          font-size: 0.9em;
+      }
+      form button {
+          font-size: 0.9em;
+          padding: 15px 80px; /* Adjust button size */
+      }
+  }
+  
+  @media (max-width: 480px) {
+      nav .menu-toggle {
+          font-size: 1.2em;
+      }
+      nav div a {
+          font-size: 0.9em;
+      }
+      .parallax h1 {
+          font-size: 2em;
+      }
+      .parallax p {
+          font-size: 1.2em;
+      }
+      #contact {
+          padding: 20px;
+      }
+      footer {
+          font-size: 0.8em;
+      }
+  }
+  
